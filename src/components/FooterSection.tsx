@@ -57,9 +57,7 @@ const FooterSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 py-12 border-t border-border/30">
           <AnimatedSection delay={0.1}>
             <Link to="/" className="inline-block mb-4">
-              <span className="text-3xl font-display font-bold text-gradient-hero">
-                PIXEL*
-              </span>
+              <span className="text-3xl font-display font-bold text-gradient-hero">M.SAMI</span>
             </Link>
             <p className="text-muted-foreground text-sm">Creating bold, playful, and unforgettable designs since 2020.</p>
           </AnimatedSection>
