@@ -171,7 +171,22 @@ const Contact = () => {
                     <div>
                       
                       <div className="flex flex-wrap gap-2">
-                        {budgetOptions.map(option => {})}
+                        {budgetOptions.map(option => (
+                          <motion.button
+                            key={option}
+                            type="button"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => setFormData({ ...formData, budget: option })}
+                            className={`px-4 py-2 rounded-full text-sm font-display transition-all ${
+                              formData.budget === option
+                                ? 'bg-primary text-primary-foreground'
+                                : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                            }`}
+                          >
+                            {option}
+                          </motion.button>
+                        ))}
                       </div>
                     </div>
 
