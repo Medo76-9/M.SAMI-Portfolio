@@ -42,12 +42,11 @@ const FeaturedWork = () => {
           }}>
               SELECTED WORKS
             </motion.span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold mt-2">FUTURE Playground<span className="text-gradient-hero"> Playground</span>
+            <h2 className="text-4xl md:text-6xl font-display font-bold mt-2">FUTURE PROJECTS<span className="text-gradient-hero"> Playground</span>
             </h2>
           </div>
-          <Link to="/portfolio" className="text-muted-foreground hover:text-foreground transition-colors font-display inline-flex items-center gap-2 group" data-cursor="View All">
-            View all projects
-            <motion.span className="inline-block" animate={{
+          <Link to="/portfolio" className="text-muted-foreground hover:text-foreground transition-colors font-display inline-flex items-center gap-2 group" data-cursor="View All">View all projects
+→<motion.span className="inline-block" animate={{
             x: [0, 5, 0]
           }} transition={{
             duration: 1.5,
