@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from '../components/Navigation';
-import CustomCursor from '../components/CustomCursor';
 import FooterSection from '../components/FooterSection';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -82,8 +81,7 @@ const Portfolio = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden noise-overlay">
-      <CustomCursor />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden noise-overlay cursor-default">
       <Navigation />
       
       <main className="pt-32 pb-20">

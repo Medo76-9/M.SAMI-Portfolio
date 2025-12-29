@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
-import CustomCursor from '../components/CustomCursor';
 import FooterSection from '../components/FooterSection';
 import AnimatedSection from '../components/AnimatedSection';
 import { toast } from 'sonner';
@@ -32,8 +31,7 @@ const Contact = () => {
     });
   };
   const budgetOptions = ['Less than $2,000', '$2,000 - $5,000', '$5,000 - $10,000', '$10,000+', 'Not sure yet'];
-  return <div className="min-h-screen bg-background text-foreground overflow-x-hidden noise-overlay">
-      <CustomCursor />
+  return <div className="min-h-screen bg-background text-foreground overflow-x-hidden noise-overlay cursor-default">
       <Navigation />
       
       <main className="pt-32 pb-20">
@@ -171,7 +169,22 @@ const Contact = () => {
                     <div>
                       
                       <div className="flex flex-wrap gap-2">
-                        {budgetOptions.map(option => {})}
+                        {budgetOptions.map(option => (
+                          <motion.button
+                            key={option}
+                            type="button"
+                            onClick={() => setFormData({...formData, budget: option})}
+                            className={`px-4 py-2 rounded-full text-sm font-display font-bold border-2 transition-all ${
+                              formData.budget === option 
+                                ? 'bg-primary text-primary-foreground border-primary' 
+                                : 'border-border text-muted-foreground hover:border-primary hover:text-primary'
+                            }`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            {option}
+                          </motion.button>
+                        ))}
                       </div>
                     </div>
 
