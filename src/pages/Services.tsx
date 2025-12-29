@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
-import CustomCursor from '../components/CustomCursor';
 import FooterSection from '../components/FooterSection';
 import AnimatedSection from '../components/AnimatedSection';
 const services = [{
@@ -53,8 +52,7 @@ const services = [{
   popular: true
 }];
 const Services = () => {
-  return <div className="min-h-screen bg-background text-foreground overflow-x-hidden noise-overlay">
-      <CustomCursor />
+  return <div className="min-h-screen bg-background text-foreground overflow-x-hidden noise-overlay cursor-default">
       <Navigation />
       
       <main className="pt-32 pb-20">
