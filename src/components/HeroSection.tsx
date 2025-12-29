@@ -94,7 +94,7 @@ const HeroSection = () => {
             <span className="text-accent">!</span>
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Tagline */}
           <motion.p initial={{
             opacity: 0,
             y: 20
@@ -104,8 +104,22 @@ const HeroSection = () => {
           }} transition={{
             delay: 0.5,
             duration: 0.6
-          }} className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            Senior Graphic Designer crafting bold, playful, and unforgettable visual stories for brands that dare to be different.
+          }} className="text-xl md:text-2xl font-display font-medium text-foreground/90 max-w-2xl mx-auto mb-4">
+            I design visual identities that people <span className="text-primary">remember</span>, not just see.
+          </motion.p>
+          
+          {/* Subheading */}
+          <motion.p initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.6,
+            duration: 0.6
+          }} className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-12">
+            Senior Graphic Designer crafting bold, meaningful visuals for brands that dare to stand out.
           </motion.p>
 
           {/* CTA Buttons */}
