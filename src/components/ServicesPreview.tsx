@@ -5,42 +5,48 @@ const services = [
   {
     icon: '🎨',
     title: 'Brand Identity',
-    description: 'Logos, color palettes, and visual systems that make your brand unforgettable.',
+    problem: 'Your brand feels invisible?',
+    description: 'From concept to a complete visual system that builds trust and recognition.',
     color: 'bg-primary/10 hover:bg-primary/20',
     accent: 'bg-primary',
   },
   {
     icon: '✨',
     title: 'UI/UX Design',
-    description: 'Interfaces that are not just pretty but actually fun to use.',
+    problem: 'Users leave your product confused?',
+    description: 'Interfaces that feel smooth, modern, and intuitive — designed for real people.',
     color: 'bg-secondary/10 hover:bg-secondary/20',
     accent: 'bg-secondary',
   },
   {
     icon: '🎬',
     title: 'Motion Graphics',
-    description: 'Animations that bring static designs to life with personality.',
+    problem: 'Static content not engaging?',
+    description: 'Animations that bring your message to life with cinematic personality.',
     color: 'bg-accent/10 hover:bg-accent/20',
     accent: 'bg-accent',
   },
   {
     icon: '📦',
     title: 'Packaging Design',
-    description: 'Product packaging that jumps off the shelf and into hearts.',
+    problem: 'Products getting overlooked?',
+    description: 'Packaging that jumps off the shelf and tells your brand story at first glance.',
     color: 'bg-tertiary/10 hover:bg-tertiary/20',
     accent: 'bg-tertiary',
   },
   {
     icon: '🖼️',
     title: 'Illustration',
-    description: 'Custom illustrations that tell your story in a unique visual language.',
+    problem: 'Need a unique visual voice?',
+    description: 'Custom illustrations that tell your story in a distinctive, memorable way.',
     color: 'bg-primary/10 hover:bg-primary/20',
     accent: 'bg-primary',
   },
   {
     icon: '🌐',
     title: 'Web Design',
-    description: 'Websites that captivate, convert, and leave lasting impressions.',
+    problem: 'Website not converting?',
+    description: 'Websites that captivate visitors and turn them into loyal customers.',
     color: 'bg-accent/10 hover:bg-accent/20',
     accent: 'bg-accent',
   },
@@ -86,6 +92,9 @@ const ServicesPreview = () => {
                   {service.icon}
                 </motion.div>
 
+                <p className="text-sm text-primary/80 font-medium mb-2">
+                  {service.problem}
+                </p>
                 <h3 className="text-2xl font-display font-bold mb-3">
                   {service.title}
                 </h3>

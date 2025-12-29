@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+
 const navItems = [{
   name: 'Home',
   path: '/'
@@ -20,9 +21,21 @@ const navItems = [{
   name: 'Contact',
   path: '/contact'
 }];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  
+  // Track scroll for logo visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return <>
       {/* Desktop Navigation */}
       <motion.nav initial={{
@@ -36,14 +49,24 @@ const Navigation = () => {
     }} className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Link to="/" data-cursor="Home" className="relative group">
-            <motion.span className="text-2xl font-display font-bold text-gradient-hero" whileHover={{
-            scale: 1.05
-          }}>M.SAMI<motion.span className="text-secondary" animate={{
-              rotate: [0, 10, -10, 0]
-            }} transition={{
-              repeat: Infinity,
-              duration: 2
-            }}>
+            <motion.span 
+              className="text-2xl font-display font-bold text-gradient-hero"
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ 
+                opacity: isScrolled ? 0 : 1, 
+                y: isScrolled ? -20 : 0,
+                pointerEvents: isScrolled ? 'none' : 'auto'
+              }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+              whileHover={{ scale: 1.05 }}
+            >
+              M.SAMI
+              <motion.span className="text-secondary" animate={{
+                rotate: [0, 10, -10, 0]
+              }} transition={{
+                repeat: Infinity,
+                duration: 2
+              }}>
                 *
               </motion.span>
             </motion.span>
