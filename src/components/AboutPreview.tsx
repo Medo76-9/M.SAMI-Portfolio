@@ -87,7 +87,7 @@ const AboutPreview = () => {
               <span className="text-tertiary font-display font-bold text-sm tracking-wider">
                 ABOUT ME
               </span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 leading-tight"> MOHAMED SAMI<span className="text-gradient-hero">MOHAMED SAMI</span>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 leading-tight"> SAMIMOHAMED SAMI<span className="text-gradient-hero">MOHAMED SAMI</span>
               </h2>
             </AnimatedSection>
 
