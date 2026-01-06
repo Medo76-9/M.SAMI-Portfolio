@@ -18,7 +18,7 @@ const projects = [
     id: 1,
     title: "Neon Dreams",
     category: "Branding",
-    image: "./photos-uploads/brand 3.png",
+    image: "/photos-uploads/brand 3.png",
     color: "from-primary to-accent",
     size: "medium",
   },

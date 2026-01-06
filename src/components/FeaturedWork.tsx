@@ -2,13 +2,17 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 //////////////////////////////////////////////////////////////////////////////
+import brand2 from "./photos-uploads/brand-2.png";
+import social7 from "@/assets/social-media-7.png";
+import t3 from "@/assets/t-3.png";
+import thumb1 from "@/assets/Thumbnail-1.png";
 const projects = [
   {
     id: 1,
     title: "Neon Dreams",
     category: "Brand Identity",
     color: "from-primary to-accent",
-    image: "/photos-uploads/brand-2.png",
+    image: brand2,
   },
   {
     id: 2,
