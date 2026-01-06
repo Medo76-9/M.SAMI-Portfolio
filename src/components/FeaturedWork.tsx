@@ -8,30 +8,31 @@ const projects = [
     title: "Neon Dreams",
     category: "Brand Identity",
     color: "from-primary to-accent",
-    image: "/public/photos-uploads/brand 2.png",
+    image: "/photos-uploads/brand-2.png",
   },
   {
     id: 2,
     title: "Fresh Vibes",
     category: "Packaging Design",
     color: "from-secondary to-accent",
-    image: "public/photos-uploads/social media 7.png",
+    image: "/photos-uploads/social-media-7.png",
   },
   {
     id: 3,
     title: "Digital Waves",
     category: "Motion Graphics",
     color: "from-tertiary to-primary",
-    image: "public/photos-uploads/مدرس 3.png",
+    image: "/photos-uploads/t-3.png",
   },
   {
     id: 4,
     title: "Cosmic Play",
     category: "Web Design",
     color: "from-accent to-secondary",
-    image: "public/photos-uploads/Thumbnail 1.png",
+    image: "/photos-uploads/Thumbnail-1.png",
   },
 ];
+
 const FeaturedWork = () => {
   return (
     <section className="py-24 px-6 relative overflow-hidden">
