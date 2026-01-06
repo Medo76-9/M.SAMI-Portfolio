@@ -1,54 +1,60 @@
-import { motion } from 'framer-motion';
-import AnimatedSection from './AnimatedSection';
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
 
 const services = [
   {
-    icon: '🎨',
-    title: 'Brand Identity',
-    problem: 'Your brand feels invisible?',
-    description: 'From concept to a complete visual system that builds trust and recognition.',
-    color: 'bg-primary/10 hover:bg-primary/20',
-    accent: 'bg-primary',
+    icon: "🎨",
+    title: "Brand Identity",
+    problem: "Your brand feels invisible?",
+    description:
+      "From concept to a complete visual system that builds trust and recognition.",
+    color: "bg-primary/10 hover:bg-primary/20",
+    accent: "bg-primary",
   },
   {
-    icon: '✨',
-    title: 'UI/UX Design',
-    problem: 'Users leave your product confused?',
-    description: 'Interfaces that feel smooth, modern, and intuitive — designed for real people.',
-    color: 'bg-secondary/10 hover:bg-secondary/20',
-    accent: 'bg-secondary',
+    icon: "✨",
+    title: "Social Media Design",
+    problem: "Need scroll-stopping content?",
+    description:
+      "Creative visuals and ads designed to grab attention, boost engagement, and strengthen your brand presence.",
+    color: "bg-secondary/10 hover:bg-secondary/20",
+    accent: "bg-secondary",
   },
   {
-    icon: '🎬',
-    title: 'Motion Graphics',
-    problem: 'Static content not engaging?',
-    description: 'Animations that bring your message to life with cinematic personality.',
-    color: 'bg-accent/10 hover:bg-accent/20',
-    accent: 'bg-accent',
+    icon: "🎬",
+    title: "Motion Graphics",
+    problem: "Static content not engaging?",
+    description:
+      "Animations that bring your message to life with cinematic personality.",
+    color: "bg-accent/10 hover:bg-accent/20",
+    accent: "bg-accent",
   },
   {
-    icon: '📦',
-    title: 'Packaging Design',
-    problem: 'Products getting overlooked?',
-    description: 'Packaging that jumps off the shelf and tells your brand story at first glance.',
-    color: 'bg-tertiary/10 hover:bg-tertiary/20',
-    accent: 'bg-tertiary',
+    icon: "📂",
+    title: "Graphic Layouts",
+    problem: "Products getting overlooked?",
+    description:
+      "Well-structured layouts with strong hierarchy, spacing, and typography — designed to make content clear, balanced, and visually engaging.",
+    color: "bg-tertiary/10 hover:bg-tertiary/20",
+    accent: "bg-tertiary",
   },
   {
-    icon: '🖼️',
-    title: 'Illustration',
-    problem: 'Need a unique visual voice?',
-    description: 'Custom illustrations that tell your story in a distinctive, memorable way.',
-    color: 'bg-primary/10 hover:bg-primary/20',
-    accent: 'bg-primary',
+    icon: "🖼️",
+    title: "Print Design",
+    problem: "Need a unique visual voice?",
+    description:
+      "Custom illustrations that tell your story in a distinctive, memorable way.",
+    color: "bg-primary/10 hover:bg-primary/20",
+    accent: "bg-primary",
   },
   {
-    icon: '🌐',
-    title: 'Web Design',
-    problem: 'Website not converting?',
-    description: 'Websites that captivate visitors and turn them into loyal customers.',
-    color: 'bg-accent/10 hover:bg-accent/20',
-    accent: 'bg-accent',
+    icon: "📝",
+    title: "Campaign Design",
+    problem: "Need designs ready for print?",
+    description:
+      "Print-ready designs crafted with proper layout, colors, and production standards — from concept to final output.",
+    color: "bg-accent/10 hover:bg-accent/20",
+    accent: "bg-accent",
   },
 ];
 
@@ -65,8 +71,8 @@ const ServicesPreview = () => {
             <span className="text-gradient-lime"> spark joy</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            From concept to completion, I offer a range of creative services 
-            to help your brand shine brighter than ever.
+            From concept to completion, I offer a range of creative services to
+            help your brand shine brighter than ever.
           </p>
         </AnimatedSection>
 
@@ -80,14 +86,18 @@ const ServicesPreview = () => {
               <motion.div
                 className={`relative p-8 rounded-3xl ${service.color} border border-border/30 transition-colors duration-300 group h-full`}
                 whileHover={{ y: -8, rotate: index % 2 === 0 ? 1 : -1 }}
-                transition={{ type: 'spring', damping: 20 }}
+                transition={{ type: "spring", damping: 20 }}
                 data-cursor={service.title}
               >
                 {/* Icon */}
                 <motion.div
                   className="text-5xl mb-6"
                   animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, delay: index * 0.5 }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    delay: index * 0.5,
+                  }}
                 >
                   {service.icon}
                 </motion.div>
@@ -98,9 +108,7 @@ const ServicesPreview = () => {
                 <h3 className="text-2xl font-display font-bold mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground">
-                  {service.description}
-                </p>
+                <p className="text-muted-foreground">{service.description}</p>
 
                 {/* Hover accent line */}
                 <motion.div
@@ -111,7 +119,11 @@ const ServicesPreview = () => {
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <motion.span
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                     className="block text-2xl"
                   >
                     ⭐
