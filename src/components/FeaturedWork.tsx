@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 //////////////////////////////////////////////////////////////////////////////
+import brand2 from "@/assets/photos-uploads/brand2.png";
+import socialmedia7 from "@/assets/photos-uploads/socialmedia7.png";
+import t3 from "@/assets/photos-uploads/t-3.png";
+import thumbnail1 from "@/assets/photos-uploads/Thumbnail1.png";
 
 const projects = [
   {
@@ -9,28 +13,28 @@ const projects = [
     title: "Neon Dreams",
     category: "Brand Identity",
     color: "from-primary to-accent",
-    image: "./photos-uploads/brand2.png",
+    image: brand2,
   },
   {
     id: 2,
     title: "Fresh Vibes",
     category: "Packaging Design",
     color: "from-secondary to-accent",
-    image: "/photos-uploads/socialmedia7.png",
+    image: socialmedia7,
   },
   {
     id: 3,
     title: "Digital Waves",
     category: "Motion Graphics",
     color: "from-tertiary to-primary",
-    image: "/photos-uploads/t-3.png",
+    image: t3,
   },
   {
     id: 4,
     title: "Cosmic Play",
     category: "Web Design",
     color: "from-accent to-secondary",
-    image: "/photos-uploads/Thumbnail1.png",
+    image: thumbnail1,
   },
 ];
 
