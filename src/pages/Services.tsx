@@ -192,7 +192,7 @@ const Services = () => {
             </div>
 
             {/* CTA */}
-            <AnimatedSection delay={0.5} className="text-center mt-20">
+            {/* <AnimatedSection delay={0.5} className="text-center mt-20">
               <motion.div
                 className="p-12 rounded-3xl bg-gradient-hero relative overflow-hidden"
                 whileHover={{
@@ -222,11 +222,11 @@ const Services = () => {
                   </motion.a>
                 </div>
 
-                {/* Decorative circles */}
+                
                 <div className="absolute -top-20 -right-20 w-60 h-60 bg-foreground/10 rounded-full" />
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-foreground/10 rounded-full" />
               </motion.div>
-            </AnimatedSection>
+            </AnimatedSection> */}
           </div>
         </section>
       </main>
