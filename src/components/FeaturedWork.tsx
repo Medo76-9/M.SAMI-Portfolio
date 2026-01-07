@@ -2,24 +2,21 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 //////////////////////////////////////////////////////////////////////////////
-import brand2 from "./photos-uploads/brand-2.png";
-import social7 from "@/assets/social-media-7.png";
-import t3 from "@/assets/t-3.png";
-import thumb1 from "@/assets/Thumbnail-1.png";
+
 const projects = [
   {
     id: 1,
     title: "Neon Dreams",
     category: "Brand Identity",
     color: "from-primary to-accent",
-    image: brand2,
+    image: "./photos-uploads/brand2.png",
   },
   {
     id: 2,
     title: "Fresh Vibes",
     category: "Packaging Design",
     color: "from-secondary to-accent",
-    image: "/photos-uploads/social-media-7.png",
+    image: "/photos-uploads/socialmedia7.png",
   },
   {
     id: 3,
@@ -33,7 +30,7 @@ const projects = [
     title: "Cosmic Play",
     category: "Web Design",
     color: "from-accent to-secondary",
-    image: "/photos-uploads/Thumbnail-1.png",
+    image: "/photos-uploads/Thumbnail1.png",
   },
 ];
 
